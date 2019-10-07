@@ -1,6 +1,6 @@
 CXX=g++
 CXXFLAGS=-Wextra -Wall -Werror -MMD -g
-OBJECTS=SimpleMCMain2.o SimpleMC.o Random1.o PayOff1.o
+OBJECTS=SimpleMCMain5.o SimpleMC2.o Random1.o PayOff2.o DoubleDigital.o
 DEPENDS=${OBJECTS:.o=.d}
 EXEC=montecarlo
 
