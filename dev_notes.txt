@@ -1,0 +1,2 @@
+We should add a testing class to facilitate instant program testing from the Makefile entry point. 
+We should add a demo class to instigate a demo presentation upon request.

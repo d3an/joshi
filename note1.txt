@@ -1,0 +1,2 @@
+Interesting note in section 4.6: the `new` command provided by the C++ Standard Library is inherently inefficient for multiple use cases. It is sometimes necessary to overwrite the function for
+increased program optimization. Although this is not an ideal solution, it merits an interesting point. Further research should be conducted.
