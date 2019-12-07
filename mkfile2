@@ -1,0 +1,23 @@
+CXX=g++
+CXXFLAGS=-Wextra -Wall -Werror -MMD -g
+EXEC=montecarlo
+OBJECTS=SimpleMCMain2.o SimpleMC.o Random1.o PayOff1.o
+DEPENDS=${OBJECTS:.o=.d}
+
+.PHONY: v2
+override OBJECTS=SimpleMCMain2.o SimpleMC.o Random1.o PayOff1.o
+override DEPENDS=${OBJECTS:.o=.d}   
+-include ${DEPENDS}
+v2: ${OBJECTS}
+	${CXX} ${CXXFLAGS} ${OBJECTS} -o ${EXEC}
+
+.PHONY: v3
+override OBJECTS=SimpleMCMain5.o SimpleMC2.o Random1.o PayOff2.o DoubleDigital.o
+override DEPENDS=${OBJECTS:.o=.d}
+-include ${DEPENDS}
+v3: ${OBJECTS}
+	${CXX} ${CXXFLAGS} ${OBJECTS} -o ${EXEC}
+
+.PHONY: clean
+clean:
+	rm ${OBJECTS} ${DEPENDS} ${EXEC}
